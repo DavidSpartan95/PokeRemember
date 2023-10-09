@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		713232E92AD3FA8A00B883C1 /* PokeRememberApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713232E82AD3FA8A00B883C1 /* PokeRememberApp.swift */; };
+		713232EB2AD3FA8A00B883C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713232EA2AD3FA8A00B883C1 /* ContentView.swift */; };
+		713232ED2AD3FA8B00B883C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 713232EC2AD3FA8B00B883C1 /* Assets.xcassets */; };
+		713232F02AD3FA8B00B883C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 713232EF2AD3FA8B00B883C1 /* Preview Assets.xcassets */; };
+		713232FA2AD3FA8C00B883C1 /* PokeRememberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713232F92AD3FA8C00B883C1 /* PokeRememberTests.swift */; };
+		713233042AD3FA8C00B883C1 /* PokeRememberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713233032AD3FA8C00B883C1 /* PokeRememberUITests.swift */; };
+		713233062AD3FA8C00B883C1 /* PokeRememberUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713233052AD3FA8C00B883C1 /* PokeRememberUITestsLaunchTests.swift */; };
+		7168E0F02AD418E200D06A61 /* PokemonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7168E0EF2AD418E200D06A61 /* PokemonData.swift */; };
+		7168E0F42AD41DBA00D06A61 /* PokemonInfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7168E0F32AD41DBA00D06A61 /* PokemonInfoPage.swift */; };
+		7168E0F62AD420A800D06A61 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7168E0F52AD420A800D06A61 /* API.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		713232F62AD3FA8C00B883C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 713232DD2AD3FA8900B883C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 713232E42AD3FA8A00B883C1;
+			remoteInfo = PokeRemember;
+		};
+		713233002AD3FA8C00B883C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 713232DD2AD3FA8900B883C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 713232E42AD3FA8A00B883C1;
+			remoteInfo = PokeRemember;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		713232E52AD3FA8A00B883C1 /* PokeRemember.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeRemember.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		713232E82AD3FA8A00B883C1 /* PokeRememberApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeRememberApp.swift; sourceTree = "<group>"; };
+		713232EA2AD3FA8A00B883C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		713232EC2AD3FA8B00B883C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		713232EF2AD3FA8B00B883C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		713232F52AD3FA8C00B883C1 /* PokeRememberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokeRememberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		713232F92AD3FA8C00B883C1 /* PokeRememberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeRememberTests.swift; sourceTree = "<group>"; };
+		713232FF2AD3FA8C00B883C1 /* PokeRememberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokeRememberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		713233032AD3FA8C00B883C1 /* PokeRememberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeRememberUITests.swift; sourceTree = "<group>"; };
+		713233052AD3FA8C00B883C1 /* PokeRememberUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeRememberUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7168E0EF2AD418E200D06A61 /* PokemonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonData.swift; sourceTree = "<group>"; };
+		7168E0F32AD41DBA00D06A61 /* PokemonInfoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonInfoPage.swift; sourceTree = "<group>"; };
+		7168E0F52AD420A800D06A61 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		713232E22AD3FA8A00B883C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		713232F22AD3FA8C00B883C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		713232FC2AD3FA8C00B883C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		713232DC2AD3FA8900B883C1 = {
+			isa = PBXGroup;
+			children = (
+				713232E72AD3FA8A00B883C1 /* PokeRemember */,
+				713232F82AD3FA8C00B883C1 /* PokeRememberTests */,
+				713233022AD3FA8C00B883C1 /* PokeRememberUITests */,
+				713232E62AD3FA8A00B883C1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		713232E62AD3FA8A00B883C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				713232E52AD3FA8A00B883C1 /* PokeRemember.app */,
+				713232F52AD3FA8C00B883C1 /* PokeRememberTests.xctest */,
+				713232FF2AD3FA8C00B883C1 /* PokeRememberUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		713232E72AD3FA8A00B883C1 /* PokeRemember */ = {
+			isa = PBXGroup;
+			children = (
+				7168E0F22AD41D1A00D06A61 /* View */,
+				7168E0F12AD41CF100D06A61 /* Model */,
+				713232EC2AD3FA8B00B883C1 /* Assets.xcassets */,
+				713232EE2AD3FA8B00B883C1 /* Preview Content */,
+			);
+			path = PokeRemember;
+			sourceTree = "<group>";
+		};
+		713232EE2AD3FA8B00B883C1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				713232EF2AD3FA8B00B883C1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		713232F82AD3FA8C00B883C1 /* PokeRememberTests */ = {
+			isa = PBXGroup;
+			children = (
+				713232F92AD3FA8C00B883C1 /* PokeRememberTests.swift */,
+			);
+			path = PokeRememberTests;
+			sourceTree = "<group>";
+		};
+		713233022AD3FA8C00B883C1 /* PokeRememberUITests */ = {
+			isa = PBXGroup;
+			children = (
+				713233032AD3FA8C00B883C1 /* PokeRememberUITests.swift */,
+				713233052AD3FA8C00B883C1 /* PokeRememberUITestsLaunchTests.swift */,
+			);
+			path = PokeRememberUITests;
+			sourceTree = "<group>";
+		};
+		7168E0F12AD41CF100D06A61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7168E0EF2AD418E200D06A61 /* PokemonData.swift */,
+				713232E82AD3FA8A00B883C1 /* PokeRememberApp.swift */,
+				7168E0F52AD420A800D06A61 /* API.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7168E0F22AD41D1A00D06A61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				713232EA2AD3FA8A00B883C1 /* ContentView.swift */,
+				7168E0F32AD41DBA00D06A61 /* PokemonInfoPage.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		713232E42AD3FA8A00B883C1 /* PokeRemember */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 713233092AD3FA8C00B883C1 /* Build configuration list for PBXNativeTarget "PokeRemember" */;
+			buildPhases = (
+				713232E12AD3FA8A00B883C1 /* Sources */,
+				713232E22AD3FA8A00B883C1 /* Frameworks */,
+				713232E32AD3FA8A00B883C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PokeRemember;
+			productName = PokeRemember;
+			productReference = 713232E52AD3FA8A00B883C1 /* PokeRemember.app */;
+			productType = "com.apple.product-type.application";
+		};
+		713232F42AD3FA8C00B883C1 /* PokeRememberTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7132330C2AD3FA8C00B883C1 /* Build configuration list for PBXNativeTarget "PokeRememberTests" */;
+			buildPhases = (
+				713232F12AD3FA8C00B883C1 /* Sources */,
+				713232F22AD3FA8C00B883C1 /* Frameworks */,
+				713232F32AD3FA8C00B883C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				713232F72AD3FA8C00B883C1 /* PBXTargetDependency */,
+			);
+			name = PokeRememberTests;
+			productName = PokeRememberTests;
+			productReference = 713232F52AD3FA8C00B883C1 /* PokeRememberTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		713232FE2AD3FA8C00B883C1 /* PokeRememberUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7132330F2AD3FA8C00B883C1 /* Build configuration list for PBXNativeTarget "PokeRememberUITests" */;
+			buildPhases = (
+				713232FB2AD3FA8C00B883C1 /* Sources */,
+				713232FC2AD3FA8C00B883C1 /* Frameworks */,
+				713232FD2AD3FA8C00B883C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				713233012AD3FA8C00B883C1 /* PBXTargetDependency */,
+			);
+			name = PokeRememberUITests;
+			productName = PokeRememberUITests;
+			productReference = 713232FF2AD3FA8C00B883C1 /* PokeRememberUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		713232DD2AD3FA8900B883C1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					713232E42AD3FA8A00B883C1 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					713232F42AD3FA8C00B883C1 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 713232E42AD3FA8A00B883C1;
+					};
+					713232FE2AD3FA8C00B883C1 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 713232E42AD3FA8A00B883C1;
+					};
+				};
+			};
+			buildConfigurationList = 713232E02AD3FA8900B883C1 /* Build configuration list for PBXProject "PokeRemember" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 713232DC2AD3FA8900B883C1;
+			productRefGroup = 713232E62AD3FA8A00B883C1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				713232E42AD3FA8A00B883C1 /* PokeRemember */,
+				713232F42AD3FA8C00B883C1 /* PokeRememberTests */,
+				713232FE2AD3FA8C00B883C1 /* PokeRememberUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		713232E32AD3FA8A00B883C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				713232F02AD3FA8B00B883C1 /* Preview Assets.xcassets in Resources */,
+				713232ED2AD3FA8B00B883C1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		713232F32AD3FA8C00B883C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		713232FD2AD3FA8C00B883C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		713232E12AD3FA8A00B883C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				713232EB2AD3FA8A00B883C1 /* ContentView.swift in Sources */,
+				7168E0F02AD418E200D06A61 /* PokemonData.swift in Sources */,
+				7168E0F42AD41DBA00D06A61 /* PokemonInfoPage.swift in Sources */,
+				713232E92AD3FA8A00B883C1 /* PokeRememberApp.swift in Sources */,
+				7168E0F62AD420A800D06A61 /* API.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		713232F12AD3FA8C00B883C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				713232FA2AD3FA8C00B883C1 /* PokeRememberTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		713232FB2AD3FA8C00B883C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				713233062AD3FA8C00B883C1 /* PokeRememberUITestsLaunchTests.swift in Sources */,
+				713233042AD3FA8C00B883C1 /* PokeRememberUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		713232F72AD3FA8C00B883C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 713232E42AD3FA8A00B883C1 /* PokeRemember */;
+			targetProxy = 713232F62AD3FA8C00B883C1 /* PBXContainerItemProxy */;
+		};
+		713233012AD3FA8C00B883C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 713232E42AD3FA8A00B883C1 /* PokeRemember */;
+			targetProxy = 713233002AD3FA8C00B883C1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		713233072AD3FA8C00B883C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		713233082AD3FA8C00B883C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7132330A2AD3FA8C00B883C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PokeRemember/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = David.PokeRemember;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7132330B2AD3FA8C00B883C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PokeRemember/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = David.PokeRemember;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7132330D2AD3FA8C00B883C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = David.PokeRememberTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokeRemember.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PokeRemember";
+			};
+			name = Debug;
+		};
+		7132330E2AD3FA8C00B883C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = David.PokeRememberTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokeRemember.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PokeRemember";
+			};
+			name = Release;
+		};
+		713233102AD3FA8C00B883C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = David.PokeRememberUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PokeRemember;
+			};
+			name = Debug;
+		};
+		713233112AD3FA8C00B883C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = David.PokeRememberUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PokeRemember;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		713232E02AD3FA8900B883C1 /* Build configuration list for PBXProject "PokeRemember" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				713233072AD3FA8C00B883C1 /* Debug */,
+				713233082AD3FA8C00B883C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		713233092AD3FA8C00B883C1 /* Build configuration list for PBXNativeTarget "PokeRemember" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7132330A2AD3FA8C00B883C1 /* Debug */,
+				7132330B2AD3FA8C00B883C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7132330C2AD3FA8C00B883C1 /* Build configuration list for PBXNativeTarget "PokeRememberTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7132330D2AD3FA8C00B883C1 /* Debug */,
+				7132330E2AD3FA8C00B883C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7132330F2AD3FA8C00B883C1 /* Build configuration list for PBXNativeTarget "PokeRememberUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				713233102AD3FA8C00B883C1 /* Debug */,
+				713233112AD3FA8C00B883C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 713232DD2AD3FA8900B883C1 /* Project object */;
+}
