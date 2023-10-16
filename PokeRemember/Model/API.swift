@@ -100,8 +100,6 @@ struct Pokemon {
     }
 }
 
-var pokemonArray: [Pokemon] = []
-
 func decodeAPI(pokemonID:Int, onCompletion: @escaping(Result<Pokemon, Error>) -> Void ) -> Pokemon? {
     
     var pokemon: Pokemon?
@@ -117,7 +115,6 @@ func decodeAPI(pokemonID:Int, onCompletion: @escaping(Result<Pokemon, Error>) ->
                 if let jsonObject = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
                     if let pokemon = Pokemon(json: jsonObject) {
 
-                        print(pokemon.abilities[0].name)
                         onCompletion(.success(pokemon))
                         // ...
                     }

@@ -1,21 +1,21 @@
 //
-//  ContentView.swift
+//  PokemonListPage.swift
 //  PokeRemember
 //
-//  Created by David Ulvan on 2023-10-09.
+//  Created by David Ulvan on 2023-10-16.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct PokemonListPage: View {
+    
     var body: some View {
-        NavigationStack{
-            VStack {
-                Text("PokeRemember").font(.system(size: 36).bold()).foregroundColor(.white)
-                    PokemonList()
-            }
-            .padding().background(.red)
+        VStack {
+            Text("PokeRemember").font(.system(size: 36).bold()).foregroundColor(.white)
+                PokemonList()
         }
+        .padding().background(.red)
+        
     }
 }
 
@@ -43,11 +43,5 @@ struct PokemonList: View {
                 }
             }.background(.red).scrollContentBackground(.hidden).cornerRadius(8)
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
