@@ -18,12 +18,8 @@ struct PokemonListPage: View {
                 logedIn = false
                 
             })
-            Button("Change Age", action: {
-                if let userUID = dataManager.userUID {
-                    dataManager.updateAge(age: 567, userUID: userUID)
-                }else{
-                    print("NO userUID")
-                }
+            NavigationLink(destination: PokemonFlashCardView(), label: {
+                Text("PlayFlashCardGame").bold().padding().foregroundColor(.black)
             })
             Text(dataManager.user?.name ?? "NO DATA")
             

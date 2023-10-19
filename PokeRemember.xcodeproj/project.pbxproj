@@ -26,6 +26,7 @@
 		71D9C2252ADD6A3A000279B4 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9C2242ADD6A3A000279B4 /* Database.swift */; };
 		71D9C2672AE128CA000279B4 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9C2662AE128CA000279B4 /* UserData.swift */; };
 		71D9C2692AE12A9F000279B4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9C2682AE12A9F000279B4 /* DataManager.swift */; };
+		71D9C26B2AE15490000279B4 /* PokemonFlashCardVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9C26A2AE15490000279B4 /* PokemonFlashCardVeiw.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		71D9C2242ADD6A3A000279B4 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		71D9C2662AE128CA000279B4 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		71D9C2682AE12A9F000279B4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		71D9C26A2AE15490000279B4 /* PokemonFlashCardVeiw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonFlashCardVeiw.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				71D9C2132ADD331D000279B4 /* PokemonListPage.swift */,
 				71D9C2152ADD365D000279B4 /* LoginPage.swift */,
 				71D9C2172ADD3FDF000279B4 /* RegisterPage.swift */,
+				71D9C26A2AE15490000279B4 /* PokemonFlashCardVeiw.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				71D9C2252ADD6A3A000279B4 /* Database.swift in Sources */,
 				7168E0F62AD420A800D06A61 /* API.swift in Sources */,
 				71D9C2692AE12A9F000279B4 /* DataManager.swift in Sources */,
+				71D9C26B2AE15490000279B4 /* PokemonFlashCardVeiw.swift in Sources */,
 				71D9C2672AE128CA000279B4 /* UserData.swift in Sources */,
 				71D9C2182ADD3FDF000279B4 /* RegisterPage.swift in Sources */,
 			);
