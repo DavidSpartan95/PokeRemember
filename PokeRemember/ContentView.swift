@@ -9,25 +9,26 @@ import SwiftUI
 import Firebase
 
 struct ContentView: View {
+    @EnvironmentObject var dataManager: DataManager
+    @State var userIsLoggedIn = false
     
-    @State private var userIsLoggedIn = false
     
     var body: some View {
         
         if !userIsLoggedIn {
             NavigationStack{
-                LogInPage()
+                LogInPage(logedIn: $userIsLoggedIn)
             }.onAppear{
                 Auth.auth().addStateDidChangeListener{ auth, user in
                     if let user = user {
+                        dataManager.userUID = user.uid
                         userIsLoggedIn.toggle()
                     }
-                    
                 }
             }
         }else {
             NavigationStack{
-                PokemonListPage()
+                PokemonListPage(logedIn: $userIsLoggedIn).environmentObject(dataManager)
             }
         }
     }

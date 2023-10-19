@@ -8,14 +8,29 @@
 import SwiftUI
 
 struct PokemonListPage: View {
+    @EnvironmentObject var dataManager: DataManager
+    @Binding var logedIn: Bool
     
     var body: some View {
         VStack {
+            Button("logout", action: {
+                logout()
+                logedIn = false
+                
+            })
+            Button("Change Age", action: {
+                if let userUID = dataManager.userUID {
+                    dataManager.updateAge(age: 567, userUID: userUID)
+                }else{
+                    print("NO userUID")
+                }
+            })
+            Text(dataManager.user?.name ?? "NO DATA")
+            
             Text("PokeRemember").font(.system(size: 36).bold()).foregroundColor(.white)
                 PokemonList()
         }
         .padding().background(.red)
-        
     }
 }
 

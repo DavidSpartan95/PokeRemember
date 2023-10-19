@@ -8,7 +8,6 @@
 import UIKit
 import Foundation
 
-
 struct Type {
     let slot: Int
     let name: String

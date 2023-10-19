@@ -47,6 +47,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct PokeRemember: App {
+    @StateObject var dataManager = DataManager()
   // register app delegate for Firebase setup
   @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
@@ -54,7 +55,7 @@ struct PokeRemember: App {
   var body: some Scene {
     WindowGroup {
       NavigationView {
-        ContentView()
+          ContentView().environmentObject(dataManager)
       }
     }
   }

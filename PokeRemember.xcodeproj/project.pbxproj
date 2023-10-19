@@ -24,6 +24,8 @@
 		71D9C21D2ADD5F74000279B4 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 71D9C21C2ADD5F74000279B4 /* FirebaseFirestore */; };
 		71D9C21F2ADD614E000279B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71D9C21E2ADD614E000279B4 /* GoogleService-Info.plist */; };
 		71D9C2252ADD6A3A000279B4 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9C2242ADD6A3A000279B4 /* Database.swift */; };
+		71D9C2672AE128CA000279B4 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9C2662AE128CA000279B4 /* UserData.swift */; };
+		71D9C2692AE12A9F000279B4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9C2682AE12A9F000279B4 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +47,7 @@
 
 /* Begin PBXFileReference section */
 		713232E52AD3FA8A00B883C1 /* PokeRemember.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeRemember.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		713232E82AD3FA8A00B883C1 /* PokeRememberApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeRememberApp.swift; sourceTree = "<group>"; };
+		713232E82AD3FA8A00B883C1 /* PokeRememberApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PokeRememberApp.swift; path = Model/PokeRememberApp.swift; sourceTree = "<group>"; };
 		713232EA2AD3FA8A00B883C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		713232EC2AD3FA8B00B883C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		713232EF2AD3FA8B00B883C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -62,6 +64,8 @@
 		71D9C2172ADD3FDF000279B4 /* RegisterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage.swift; sourceTree = "<group>"; };
 		71D9C21E2ADD614E000279B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		71D9C2242ADD6A3A000279B4 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		71D9C2662AE128CA000279B4 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		71D9C2682AE12A9F000279B4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 		713232E72AD3FA8A00B883C1 /* PokeRemember */ = {
 			isa = PBXGroup;
 			children = (
+				713232E82AD3FA8A00B883C1 /* PokeRememberApp.swift */,
 				713232EA2AD3FA8A00B883C1 /* ContentView.swift */,
 				71D9C21E2ADD614E000279B4 /* GoogleService-Info.plist */,
 				7168E0F22AD41D1A00D06A61 /* View */,
@@ -153,9 +158,10 @@
 			isa = PBXGroup;
 			children = (
 				7168E0EF2AD418E200D06A61 /* PokemonData.swift */,
-				713232E82AD3FA8A00B883C1 /* PokeRememberApp.swift */,
 				7168E0F52AD420A800D06A61 /* API.swift */,
 				71D9C2242ADD6A3A000279B4 /* Database.swift */,
+				71D9C2662AE128CA000279B4 /* UserData.swift */,
+				71D9C2682AE12A9F000279B4 /* DataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,6 +323,8 @@
 				713232E92AD3FA8A00B883C1 /* PokeRememberApp.swift in Sources */,
 				71D9C2252ADD6A3A000279B4 /* Database.swift in Sources */,
 				7168E0F62AD420A800D06A61 /* API.swift in Sources */,
+				71D9C2692AE12A9F000279B4 /* DataManager.swift in Sources */,
+				71D9C2672AE128CA000279B4 /* UserData.swift in Sources */,
 				71D9C2182ADD3FDF000279B4 /* RegisterPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

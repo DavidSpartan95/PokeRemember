@@ -11,6 +11,7 @@ struct LogInPage: View {
     
     @State private var email = ""
     @State private var password = ""
+    @Binding var logedIn: Bool
     
     var body: some View {
         GeometryReader { geometry in
@@ -25,8 +26,16 @@ struct LogInPage: View {
                 
                 SecureField("Password", text: $password)
                     .frame(width: geometry.size.width*0.33, height: geometry.size.height*0.05).background(.white)
-                Button("SIGN UP", action: {
-                    login(email: email, password: password)
+                Button("LOG IN", action: {
+    
+                    login(email: email, password: password) { success in
+                        if success {
+                            logedIn = true
+                        } else {
+                            print("Failed to log in")
+                        }
+                    }
+
                 })
                 NavigationLink(destination: RegisterPage(), label: {
                     Text("Register account").bold().padding().foregroundColor(.black)

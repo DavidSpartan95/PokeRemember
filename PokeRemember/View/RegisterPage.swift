@@ -12,7 +12,7 @@ struct RegisterPage: View {
     
     @State var email = ""
     @State var password = ""
-    
+    @Environment(\.dismiss) private var dismiss
     var body: some View{
         GeometryReader { geometry in
             VStack {
@@ -29,7 +29,14 @@ struct RegisterPage: View {
                     .frame(width: geometry.size.width*0.33, height: geometry.size.height*0.05).background(.white)
                 
                 Button("SIGN UP", action: {
-                    register(email: email, password: password)
+                    register(email: email, password: password){success in
+                        
+                        if success {
+                            dismiss()
+                        }else {
+                            print("Failed to sign in")
+                        }
+                    }
                 })
                 
             }
