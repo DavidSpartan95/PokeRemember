@@ -27,6 +27,7 @@
 		71D9C2672AE128CA000279B4 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9C2662AE128CA000279B4 /* UserData.swift */; };
 		71D9C2692AE12A9F000279B4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9C2682AE12A9F000279B4 /* DataManager.swift */; };
 		71D9C26B2AE15490000279B4 /* PokemonFlashCardVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9C26A2AE15490000279B4 /* PokemonFlashCardVeiw.swift */; };
+		71D9C26D2AE2D400000279B4 /* FlashCardGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9C26C2AE2D400000279B4 /* FlashCardGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		71D9C2662AE128CA000279B4 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		71D9C2682AE12A9F000279B4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		71D9C26A2AE15490000279B4 /* PokemonFlashCardVeiw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonFlashCardVeiw.swift; sourceTree = "<group>"; };
+		71D9C26C2AE2D400000279B4 /* FlashCardGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				71D9C2242ADD6A3A000279B4 /* Database.swift */,
 				71D9C2662AE128CA000279B4 /* UserData.swift */,
 				71D9C2682AE12A9F000279B4 /* DataManager.swift */,
+				71D9C26C2AE2D400000279B4 /* FlashCardGame.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71D9C26D2AE2D400000279B4 /* FlashCardGame.swift in Sources */,
 				71D9C2142ADD331D000279B4 /* PokemonListPage.swift in Sources */,
 				713232EB2AD3FA8A00B883C1 /* ContentView.swift in Sources */,
 				7168E0F02AD418E200D06A61 /* PokemonData.swift in Sources */,
