@@ -10,20 +10,23 @@ import Foundation
 class FlashCardGame: ObservableObject{
     @Published var cardsLeft: Int
     @Published var deck: [PokemonEntry]
-    var randomNumber = Int.random(in: 0 ..< pokeArray.count)
+    var randomNumber: Int
     @Published var score = 0
     @Published var choices: [String]
+    var deckToStudy:[PokemonEntry]
     
-    init() {
+    init(deckToStudy:[PokemonEntry]) {
+        self.deckToStudy = deckToStudy
+        self.randomNumber = Int.random(in: 0 ..< deckToStudy.count)
         //self.randomNumber = randomNumber
-        self.deck = pokeArray
+        self.deck = deckToStudy
         self.choices =  [
-            pokeArray[randomNumber].name,
-            pokeArray[Int.random(in: 0 ..< pokeArray.count)].name,
-            pokeArray[Int.random(in: 0 ..< pokeArray.count)].name,
-            pokeArray[Int.random(in: 0 ..< pokeArray.count)].name
+            deckToStudy[randomNumber].name,
+            deckToStudy[Int.random(in: 0 ..< deckToStudy.count)].name,
+            deckToStudy[Int.random(in: 0 ..< deckToStudy.count)].name,
+            deckToStudy[Int.random(in: 0 ..< deckToStudy.count)].name
         ]
-        self.cardsLeft = pokeArray.count
+        self.cardsLeft = deckToStudy.count
         choices.shuffle()
     }
     
@@ -62,7 +65,7 @@ class FlashCardGame: ObservableObject{
         //append 3 radnom names from of all pokemon (all must be unique)
         while tempChoices.count < 4 {
             
-            let randomName = pokeArray.randomElement()?.name
+            let randomName = deckToStudy.randomElement()?.name
             if !tempChoices.contains(where: {$0 == randomName}) {
                 tempChoices.append(randomName ?? "???")
             }

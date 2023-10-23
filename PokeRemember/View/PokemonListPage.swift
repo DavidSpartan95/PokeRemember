@@ -8,25 +8,33 @@
 import SwiftUI
 
 struct PokemonListPage: View {
+    
+    
     @EnvironmentObject var dataManager: DataManager
     @Binding var logedIn: Bool
+    @State private var isActive: Bool = false
     
     var body: some View {
-        VStack {
-            Button("logout", action: {
-                logout()
-                logedIn = false
+        GeometryReader { geometry in
+            let width = geometry.size.width * 0.3
+            let height = geometry.size.height * 0.05
+            VStack {
+                ActionButton(title:"LogOut",width: width, height: height){
+                    logout()
+                    logedIn = false
+                }
+                NavigationLink("", destination: PokemonFlashCardView(), isActive: $isActive).hidden() // Hidden NavigationLink
                 
-            })
-            NavigationLink(destination: PokemonFlashCardView(), label: {
-                Text("PlayFlashCardGame").bold().padding().foregroundColor(.black)
-            })
-            Text(dataManager.user?.name ?? "NO DATA")
-            
-            Text("PokeRemember").font(.system(size: 36).bold()).foregroundColor(.white)
-                PokemonList()
+                ActionButton(title:"Play",width: width, height: height){
+                    isActive = true
+                }
+                Text(dataManager.user?.name ?? "NO DATA")
+                
+                Text("PokeRemember").font(.system(size: 36).bold()).foregroundColor(.white)
+                    PokemonList()
+            }
+            .padding().background(primaryColor)
         }
-        .padding().background(.red)
     }
 }
 

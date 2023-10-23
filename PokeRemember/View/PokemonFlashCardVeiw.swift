@@ -11,7 +11,7 @@ import SwiftUI
 struct PokemonFlashCardView: View {
     
     
-    @StateObject var game = FlashCardGame()
+    @StateObject var game = FlashCardGame(deckToStudy: kalosDeck)
     
     var body: some View {
         
