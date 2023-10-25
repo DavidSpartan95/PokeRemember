@@ -11,22 +11,27 @@ import SwiftUI
 struct PokemonFlashCardView: View {
     
     
-    @StateObject var game = FlashCardGame(deckToStudy: kalosDeck)
+    @StateObject var game = FlashCardGame(deckToStudy: kantoDeck)
     
     var body: some View {
         
         VStack{
-            Text("CARDS LEFT: \(game.cardsLeft)")
-            Text("SCORE: \(game.score)")
+            Text("CARDS LEFT: \(game.cardsLeft)").bold().foregroundColor(.white)
+            Text("SCORE: \(game.score)").bold().foregroundColor(.white)
             if game.deck.isEmpty {
                 Image(systemName: "checkmark.circle")
                             .resizable()
                             .frame(width: 100, height: 100)
                             .foregroundColor(.green)
+                            .shadow(radius: 5)
             }else {
                 AsyncImage(url: URL(string:game.deck[game.randomNumber].urlPicture)){ phase in
                     if let image = phase.image{
-                        image.resizable().frame(width: 200, height: 200)
+                        
+                        image.resizable()
+                            .frame(width: 200, height: 200)
+                            .shadow(color: Color.black, radius: 5) // Add a shadow with a blue color and radius of 5
+                        
                     } else if phase.error != nil {
                         // Handle error
                         Text("Error loading image")
@@ -36,24 +41,24 @@ struct PokemonFlashCardView: View {
                     }
                 }
                 HStack{
-                    Button(game.choices[0], action: {
+                    ActionButton(title: game.choices[0]){
                         game.checkAwnser(awsner: game.choices[0])
-                        
-                    })
-                    Button(game.choices[1], action: {
+                    }
+                    
+                    ActionButton(title: game.choices[1]){
                         game.checkAwnser(awsner: game.choices[1])
-                    })
+                    }
                 }
                 HStack{
-                    Button(game.choices[2], action: {
+                    ActionButton(title: game.choices[2]){
                         game.checkAwnser(awsner: game.choices[2])
-                    })
-                    Button(game.choices[3], action: {
+                    }
+                    ActionButton(title: game.choices[3]){
                         game.checkAwnser(awsner: game.choices[3])
-                    })
+                    }
                 }
             }
-        }
+        }.frame(maxWidth: .infinity, maxHeight: .infinity) // Make the VStack fill the whole screen
+            .background(primaryColor) // Set the background color of the VStack to red
     }
-    
 }

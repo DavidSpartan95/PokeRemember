@@ -9,32 +9,30 @@ import SwiftUI
 
 struct PokemonListPage: View {
     
-    
+    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var dataManager: DataManager
     @Binding var logedIn: Bool
     @State private var isActive: Bool = false
     
     var body: some View {
-        GeometryReader { geometry in
-            let width = geometry.size.width * 0.3
-            let height = geometry.size.height * 0.05
-            VStack {
-                ActionButton(title:"LogOut",width: width, height: height){
-                    logout()
-                    logedIn = false
-                }
-                NavigationLink("", destination: PokemonFlashCardView(), isActive: $isActive).hidden() // Hidden NavigationLink
-                
-                ActionButton(title:"Play",width: width, height: height){
-                    isActive = true
-                }
-                Text(dataManager.user?.name ?? "NO DATA")
-                
-                Text("PokeRemember").font(.system(size: 36).bold()).foregroundColor(.white)
-                    PokemonList()
+        
+        VStack {
+            Text("PokeRemember").font(.system(size: 36).bold()).foregroundColor(colorScheme == .dark ? textColor : .white)
+            
+            ActionButton(title:"Sign Out"){
+                logout()
+                logedIn = false
             }
-            .padding().background(primaryColor)
+            //This navigation method sucks
+            NavigationLink("", destination: PokemonFlashCardView(), isActive: $isActive).hidden() // Hidden NavigationLink
+            
+            ActionButton(title:"Play"){
+                isActive = true
+            }
+            //Text(dataManager.user?.name ?? "NO DATA")
+            PokemonList()
         }
+        .padding().background(primaryColor)
     }
 }
 
@@ -56,11 +54,11 @@ struct PokemonList: View {
                                     ProgressView()
                                 }
                             }
-                            Text(pokemon.name)
+                            Text(pokemon.name).foregroundColor(textColor)
                         }
                     }
                 }
-            }.background(.red).scrollContentBackground(.hidden).cornerRadius(8)
+            }.background(primaryColor).scrollContentBackground(.hidden).cornerRadius(8)
         }
     }
 }
