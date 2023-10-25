@@ -10,6 +10,9 @@ import Firebase
 
 struct ContentView: View {
     @EnvironmentObject var dataManager: DataManager
+    
+    //TODO make this a nil on defult, and show a loading screen while wiating for dataManager
+    
     @State var userIsLoggedIn = false
     
     

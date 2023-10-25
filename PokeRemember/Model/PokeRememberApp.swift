@@ -55,7 +55,8 @@ struct PokeRemember: App {
   var body: some Scene {
     WindowGroup {
       NavigationView {
-          ContentView().environmentObject(dataManager)
+          SplashScreenView().environmentObject(dataManager)
+          //ContentView()
       }
     }
   }
