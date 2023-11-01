@@ -37,3 +37,4 @@ struct MenuView: View {
             .background(primaryColor)
     }
 }
+

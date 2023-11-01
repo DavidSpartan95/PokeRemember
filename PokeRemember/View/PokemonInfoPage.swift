@@ -31,8 +31,6 @@ struct PokemonInfoPage: View {
         VStack {
             if let pokemonInfo = pokemonInfo {
                 
-                
-                
                 AsyncImage(url: URL(string:POKEMON.urlPicture)){ phase in
                     if let image = phase.image{
                         image.resizable()
@@ -48,7 +46,7 @@ struct PokemonInfoPage: View {
                     
                     HStack {
                         ForEach(pokemonInfo.types) { type in
-                            Text(type.name)
+                            TypeEmblem(type: type.name)
                         }
                     }
                     

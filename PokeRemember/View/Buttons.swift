@@ -46,7 +46,7 @@ struct NavigationButton: View {
     var body: some View {
         
         let screen = UIScreen.main.bounds
-        let buttonWidth = screen.width * 0.3 // 90% of the screen width
+        let buttonWidth = screen.width * 0.3 // 30% of the screen width
         //let buttonHeight = screen.height * 0.1 // 10% of the screen height
         
         Text(title)

@@ -17,6 +17,8 @@
 		7168E0F02AD418E200D06A61 /* PokemonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7168E0EF2AD418E200D06A61 /* PokemonData.swift */; };
 		7168E0F42AD41DBA00D06A61 /* PokemonInfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7168E0F32AD41DBA00D06A61 /* PokemonInfoPage.swift */; };
 		7168E0F62AD420A800D06A61 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7168E0F52AD420A800D06A61 /* API.swift */; };
+		719D66DB2AF285A400B2F95D /* InfoViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719D66DA2AF285A400B2F95D /* InfoViewComponents.swift */; };
+		719D66DD2AF289BB00B2F95D /* getColorForPokemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719D66DC2AF289BB00B2F95D /* getColorForPokemonType.swift */; };
 		71D9C2142ADD331D000279B4 /* PokemonListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9C2132ADD331D000279B4 /* PokemonListPage.swift */; };
 		71D9C2162ADD365D000279B4 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9C2152ADD365D000279B4 /* LoginPage.swift */; };
 		71D9C2182ADD3FDF000279B4 /* RegisterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9C2172ADD3FDF000279B4 /* RegisterPage.swift */; };
@@ -66,6 +68,8 @@
 		7168E0EF2AD418E200D06A61 /* PokemonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonData.swift; sourceTree = "<group>"; };
 		7168E0F32AD41DBA00D06A61 /* PokemonInfoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonInfoPage.swift; sourceTree = "<group>"; };
 		7168E0F52AD420A800D06A61 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		719D66DA2AF285A400B2F95D /* InfoViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewComponents.swift; sourceTree = "<group>"; };
+		719D66DC2AF289BB00B2F95D /* getColorForPokemonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getColorForPokemonType.swift; sourceTree = "<group>"; };
 		71D9C2132ADD331D000279B4 /* PokemonListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListPage.swift; sourceTree = "<group>"; };
 		71D9C2152ADD365D000279B4 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		71D9C2172ADD3FDF000279B4 /* RegisterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage.swift; sourceTree = "<group>"; };
@@ -179,6 +183,7 @@
 				71D9C2682AE12A9F000279B4 /* DataManager.swift */,
 				71D9C26C2AE2D400000279B4 /* FlashCardGame.swift */,
 				71D9C26E2AE6728A000279B4 /* ThemeColor.swift */,
+				719D66DC2AF289BB00B2F95D /* getColorForPokemonType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				71D9C2742AEBEF4E000279B4 /* MenuView.swift */,
 				71D9C2702AE69388000279B4 /* Buttons.swift */,
 				71D9C2762AF277FD000279B4 /* SelectDeckView.swift */,
+				719D66DA2AF285A400B2F95D /* InfoViewComponents.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -340,6 +346,7 @@
 				71D9C26D2AE2D400000279B4 /* FlashCardGame.swift in Sources */,
 				71D9C2142ADD331D000279B4 /* PokemonListPage.swift in Sources */,
 				713232EB2AD3FA8A00B883C1 /* ContentView.swift in Sources */,
+				719D66DD2AF289BB00B2F95D /* getColorForPokemonType.swift in Sources */,
 				7168E0F02AD418E200D06A61 /* PokemonData.swift in Sources */,
 				7168E0F42AD41DBA00D06A61 /* PokemonInfoPage.swift in Sources */,
 				71D9C2162ADD365D000279B4 /* LoginPage.swift in Sources */,
@@ -352,6 +359,7 @@
 				71D9C2692AE12A9F000279B4 /* DataManager.swift in Sources */,
 				71D9C26B2AE15490000279B4 /* PokemonFlashCardVeiw.swift in Sources */,
 				71D9C2772AF277FD000279B4 /* SelectDeckView.swift in Sources */,
+				719D66DB2AF285A400B2F95D /* InfoViewComponents.swift in Sources */,
 				71D9C2672AE128CA000279B4 /* UserData.swift in Sources */,
 				71D9C2182ADD3FDF000279B4 /* RegisterPage.swift in Sources */,
 			);
