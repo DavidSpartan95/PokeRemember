@@ -31,10 +31,13 @@ struct PokemonInfoPage: View {
         VStack {
             if let pokemonInfo = pokemonInfo {
                 
-                Text(String(pokemonInfo.height))
+                
+                
                 AsyncImage(url: URL(string:POKEMON.urlPicture)){ phase in
                     if let image = phase.image{
-                        image.resizable().frame(width: 100, height: 100)
+                        image.resizable()
+                            .frame(width: 200, height: 200)
+                            .shadow(radius: 5)
                     } else if phase.error != nil {
                         // Handle error
                         Text("Error loading image")
@@ -42,13 +45,26 @@ struct PokemonInfoPage: View {
                         // Placeholder or loading view
                         ProgressView()
                     }
+                    
+                    HStack {
+                        ForEach(pokemonInfo.types) { type in
+                            Text(type.name)
+                        }
+                    }
+                    
+                    Text(" Height \(String(pokemonInfo.height/10))m")
+                    Text(" weight \(String(pokemonInfo.weight/10))kg")
+                    Text(" Base EXP \(String(pokemonInfo.base_experience))")
+                    Spacer()
                 }
                 
             }else{
                 ProgressView()
             }
+            
         }.onAppear(perform: {
             self.getPokemon()
-        })
+        }).frame(maxWidth: .infinity, maxHeight: .infinity,alignment: .center ) // Make the VStack fill the whole screen
+            .background(primaryColor)
     }
 }

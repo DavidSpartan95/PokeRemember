@@ -11,25 +11,11 @@ struct PokemonListPage: View {
     
     @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var dataManager: DataManager
-    @Binding var logedIn: Bool
-    @State private var isActive: Bool = false
     
     var body: some View {
         
         VStack {
-            Text("PokeRemember").font(.system(size: 36).bold()).foregroundColor(colorScheme == .dark ? textColor : .white)
-            
-            ActionButton(title:"Sign Out"){
-                logout()
-                logedIn = false
-            }
-            //This navigation method sucks
-            NavigationLink("", destination: PokemonFlashCardView(), isActive: $isActive).hidden() // Hidden NavigationLink
-            
-            ActionButton(title:"Play"){
-                isActive = true
-            }
-            //Text(dataManager.user?.name ?? "NO DATA")
+            Text(dataManager.user?.name ?? "No name")
             PokemonList()
         }
         .padding().background(primaryColor)

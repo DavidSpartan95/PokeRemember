@@ -10,8 +10,13 @@ import SwiftUI
 
 struct PokemonFlashCardView: View {
     
+    var deck: [PokemonEntry]
+    @StateObject var game: FlashCardGame
     
-    @StateObject var game = FlashCardGame(deckToStudy: kantoDeck)
+    init(deck: [PokemonEntry]) {
+            self.deck = deck
+            self._game = StateObject(wrappedValue: FlashCardGame(deckToStudy: deck))
+        }
     
     var body: some View {
         
@@ -22,7 +27,6 @@ struct PokemonFlashCardView: View {
                 Image(systemName: "checkmark.circle")
                             .resizable()
                             .frame(width: 100, height: 100)
-                            .foregroundColor(.green)
                             .shadow(radius: 5)
             }else {
                 AsyncImage(url: URL(string:game.deck[game.randomNumber].urlPicture)){ phase in

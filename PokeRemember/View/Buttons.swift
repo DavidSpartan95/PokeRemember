@@ -34,7 +34,31 @@ struct ActionButton: View {
                 .overlay(
                     RoundedRectangle(cornerRadius: 16)
                     .stroke(highlightColor, lineWidth: 4)
-                )
+                ).multilineTextAlignment(.center)
         }
+    }
+}
+
+struct NavigationButton: View {
+    
+    var title: String
+    
+    var body: some View {
+        
+        let screen = UIScreen.main.bounds
+        let buttonWidth = screen.width * 0.3 // 90% of the screen width
+        //let buttonHeight = screen.height * 0.1 // 10% of the screen height
+        
+        Text(title)
+            .bold()
+            .frame(width: buttonWidth)
+            .foregroundColor(textColor)
+            .padding()
+            .background(secondaryColor)
+            .cornerRadius(16)
+            .overlay(
+                RoundedRectangle(cornerRadius: 16)
+                .stroke(highlightColor, lineWidth: 4)
+            ).multilineTextAlignment(.center)
     }
 }

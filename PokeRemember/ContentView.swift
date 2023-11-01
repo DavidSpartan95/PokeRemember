@@ -31,7 +31,7 @@ struct ContentView: View {
             }
         }else {
             NavigationStack{
-                PokemonListPage(logedIn: $userIsLoggedIn).environmentObject(dataManager)
+                MenuView(logedIn: $userIsLoggedIn).environmentObject(dataManager)
             }
         }
     }

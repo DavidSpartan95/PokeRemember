@@ -31,6 +31,8 @@
 		71D9C26F2AE6728A000279B4 /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9C26E2AE6728A000279B4 /* ThemeColor.swift */; };
 		71D9C2712AE69388000279B4 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9C2702AE69388000279B4 /* Buttons.swift */; };
 		71D9C2732AE94121000279B4 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9C2722AE94121000279B4 /* SplashScreenView.swift */; };
+		71D9C2752AEBEF4E000279B4 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9C2742AEBEF4E000279B4 /* MenuView.swift */; };
+		71D9C2772AF277FD000279B4 /* SelectDeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9C2762AF277FD000279B4 /* SelectDeckView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		71D9C26E2AE6728A000279B4 /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
 		71D9C2702AE69388000279B4 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		71D9C2722AE94121000279B4 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		71D9C2742AEBEF4E000279B4 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		71D9C2762AF277FD000279B4 /* SelectDeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDeckView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +179,6 @@
 				71D9C2682AE12A9F000279B4 /* DataManager.swift */,
 				71D9C26C2AE2D400000279B4 /* FlashCardGame.swift */,
 				71D9C26E2AE6728A000279B4 /* ThemeColor.swift */,
-				71D9C2702AE69388000279B4 /* Buttons.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,6 +191,9 @@
 				71D9C2152ADD365D000279B4 /* LoginPage.swift */,
 				71D9C2172ADD3FDF000279B4 /* RegisterPage.swift */,
 				71D9C26A2AE15490000279B4 /* PokemonFlashCardVeiw.swift */,
+				71D9C2742AEBEF4E000279B4 /* MenuView.swift */,
+				71D9C2702AE69388000279B4 /* Buttons.swift */,
+				71D9C2762AF277FD000279B4 /* SelectDeckView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -337,6 +343,7 @@
 				7168E0F02AD418E200D06A61 /* PokemonData.swift in Sources */,
 				7168E0F42AD41DBA00D06A61 /* PokemonInfoPage.swift in Sources */,
 				71D9C2162ADD365D000279B4 /* LoginPage.swift in Sources */,
+				71D9C2752AEBEF4E000279B4 /* MenuView.swift in Sources */,
 				713232E92AD3FA8A00B883C1 /* PokeRememberApp.swift in Sources */,
 				71D9C2732AE94121000279B4 /* SplashScreenView.swift in Sources */,
 				71D9C2252ADD6A3A000279B4 /* Database.swift in Sources */,
@@ -344,6 +351,7 @@
 				71D9C26F2AE6728A000279B4 /* ThemeColor.swift in Sources */,
 				71D9C2692AE12A9F000279B4 /* DataManager.swift in Sources */,
 				71D9C26B2AE15490000279B4 /* PokemonFlashCardVeiw.swift in Sources */,
+				71D9C2772AF277FD000279B4 /* SelectDeckView.swift in Sources */,
 				71D9C2672AE128CA000279B4 /* UserData.swift in Sources */,
 				71D9C2182ADD3FDF000279B4 /* RegisterPage.swift in Sources */,
 			);

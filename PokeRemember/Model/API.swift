@@ -8,7 +8,8 @@
 import UIKit
 import Foundation
 
-struct Type {
+struct Types: Identifiable {
+    let id = UUID()
     let slot: Int
     let name: String
 }
@@ -30,10 +31,10 @@ struct Pokemon {
     let base_experience: Int
     let sprites: [String: Any]
     let id: Int
-    let height: Int
+    let height: Double
     let stats: [Stat]
-    let weight: Int
-    let types: [Type]  // Add types field
+    let weight: Double
+    let types: [Types]  // Add types field
     
     init?(json: [String: Any]) {
         guard let forms = json["forms"] as? [[String: String]],
@@ -42,8 +43,8 @@ struct Pokemon {
               let base_experience = json["base_experience"] as? Int,
               let sprites = json["sprites"] as? [String: Any],
               let id = json["id"] as? Int,
-              let height = json["height"] as? Int,
-              let weight = json["weight"] as? Int,
+              let height = json["height"] as? Double,
+              let weight = json["weight"] as? Double,
               let statsArray = json["stats"] as? [[String: Any]],
               let typesArray = json["types"] as? [[String: Any]] else {
             return nil
@@ -75,7 +76,7 @@ struct Pokemon {
             stats.append(stat)
         }
         
-        var types: [Type] = []
+        var types: [Types] = []
         for typeDict in typesArray {
             guard let slot = typeDict["slot"] as? Int,
                   let typeName = typeDict["type"] as? [String: String],
@@ -83,7 +84,7 @@ struct Pokemon {
                 return nil
             }
             
-            let type = Type(slot: slot, name: name)
+            let type = Types(slot: slot, name: name)
             types.append(type)
         }
         self.abilities = abilities
@@ -127,8 +128,5 @@ func decodeAPI(pokemonID:Int, onCompletion: @escaping(Result<Pokemon, Error>) ->
     task.resume()
     return pokemon
 }
-
-//Thread.sleep(forTimeInterval: 3.0)
-//for x in pokemonArray {print(x.id)}
 
 

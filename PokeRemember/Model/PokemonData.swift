@@ -924,6 +924,7 @@ let unovaDeck = Array(pokeArray[494..<648])
 let kalosDeck = Array(pokeArray[649..<720])
 let alolaDeck = Array(pokeArray[721..<808])
 let galarDeck = Array(pokeArray[809..<897])
+
 /*
  PokemonEntry(name: "Golduck", urlPicture: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/55.png", dexNo:55),
  PokemonEntry(name: "Pikachu", urlPicture: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/25.png", dexNo:25)
