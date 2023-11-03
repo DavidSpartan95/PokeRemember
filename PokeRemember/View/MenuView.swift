@@ -18,6 +18,10 @@ struct MenuView: View {
         VStack{
             Text("PokeRemember").font(.system(size: 36).bold()).foregroundColor(colorScheme == .dark ? textColor : .white)
             
+            ActionButton(title:"Add Scroe"){
+                dataManager.updateScore(deckName: "kanto_score", score: 10, userUID: dataManager.userUID!)
+            }
+            
             ActionButton(title:"Sign Out"){
                 logout()
                 logedIn = false

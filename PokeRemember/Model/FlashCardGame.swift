@@ -10,6 +10,7 @@ import Foundation
 class FlashCardGame: ObservableObject{
     @Published var cardsLeft: Int
     @Published var deck: [PokemonEntry]
+    @Published var gameOver = false
     var randomNumber: Int
     @Published var score = 0
     @Published var choices: [String]
@@ -33,6 +34,8 @@ class FlashCardGame: ObservableObject{
     func checkAwnser(awsner:String){
         if awsner == deck[randomNumber].name {
             addPoints()
+        }else{
+            gameOver = true
         }
         shuffleDeck(removeCard: deck[randomNumber].name)
     }
@@ -47,6 +50,7 @@ class FlashCardGame: ObservableObject{
         deck = deck.filter { $0.name != removeCard }
         if deck.isEmpty {
             cardsLeft = 0
+            gameOver = true
             return
             
         }

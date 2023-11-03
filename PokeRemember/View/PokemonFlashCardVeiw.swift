@@ -11,6 +11,7 @@ import SwiftUI
 struct PokemonFlashCardView: View {
     
     var deck: [PokemonEntry]
+    @EnvironmentObject var dataManager: DataManager
     @StateObject var game: FlashCardGame
     
     init(deck: [PokemonEntry]) {
@@ -21,13 +22,18 @@ struct PokemonFlashCardView: View {
     var body: some View {
         
         VStack{
+            if let user = dataManager.user {
+                Text(String(getDeckHighScore(user: user, deckName: deck))).bold().foregroundColor(.white)
+            }
+            
             Text("CARDS LEFT: \(game.cardsLeft)").bold().foregroundColor(.white)
             Text("SCORE: \(game.score)").bold().foregroundColor(.white)
-            if game.deck.isEmpty {
+            if game.gameOver {
+                let _ = newBestScore()
                 Image(systemName: "checkmark.circle")
-                            .resizable()
-                            .frame(width: 100, height: 100)
-                            .shadow(radius: 5)
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                    .shadow(radius: 5)
             }else {
                 AsyncImage(url: URL(string:game.deck[game.randomNumber].urlPicture)){ phase in
                     if let image = phase.image{
@@ -62,7 +68,14 @@ struct PokemonFlashCardView: View {
                     }
                 }
             }
+
         }.frame(maxWidth: .infinity, maxHeight: .infinity) // Make the VStack fill the whole screen
             .background(primaryColor) // Set the background color of the VStack to red
+    }
+    func newBestScore(){
+        print("Activate")
+        if let userUID = dataManager.userUID {
+            dataManager.updateScore(deckName: getDeckName(deckName: deck), score: game.score, userUID: userUID )
+        }
     }
 }

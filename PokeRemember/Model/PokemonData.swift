@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PokemonEntry:Identifiable {
+struct PokemonEntry:Identifiable,Equatable {
     var id = UUID()
     var name: String
     var urlPicture: String

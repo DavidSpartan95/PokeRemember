@@ -29,6 +29,7 @@ struct RegisterPage: View {
                     .frame(width: geometry.size.width*0.33, height: geometry.size.height*0.05).background(.white)
                 
                 Button("SIGN UP", action: {
+                    //TODO USE the "addUserFunction"
                     register(email: email, password: password){success in
                         
                         if success {

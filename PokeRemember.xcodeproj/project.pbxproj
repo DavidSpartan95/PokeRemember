@@ -19,6 +19,7 @@
 		7168E0F62AD420A800D06A61 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7168E0F52AD420A800D06A61 /* API.swift */; };
 		719D66DB2AF285A400B2F95D /* InfoViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719D66DA2AF285A400B2F95D /* InfoViewComponents.swift */; };
 		719D66DD2AF289BB00B2F95D /* getColorForPokemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719D66DC2AF289BB00B2F95D /* getColorForPokemonType.swift */; };
+		719D66E02AF5209300B2F95D /* getDeckInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719D66DF2AF5209300B2F95D /* getDeckInfo.swift */; };
 		71D9C2142ADD331D000279B4 /* PokemonListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9C2132ADD331D000279B4 /* PokemonListPage.swift */; };
 		71D9C2162ADD365D000279B4 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9C2152ADD365D000279B4 /* LoginPage.swift */; };
 		71D9C2182ADD3FDF000279B4 /* RegisterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9C2172ADD3FDF000279B4 /* RegisterPage.swift */; };
@@ -70,6 +71,7 @@
 		7168E0F52AD420A800D06A61 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		719D66DA2AF285A400B2F95D /* InfoViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewComponents.swift; sourceTree = "<group>"; };
 		719D66DC2AF289BB00B2F95D /* getColorForPokemonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getColorForPokemonType.swift; sourceTree = "<group>"; };
+		719D66DF2AF5209300B2F95D /* getDeckInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getDeckInfo.swift; sourceTree = "<group>"; };
 		71D9C2132ADD331D000279B4 /* PokemonListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListPage.swift; sourceTree = "<group>"; };
 		71D9C2152ADD365D000279B4 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		71D9C2172ADD3FDF000279B4 /* RegisterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		7168E0F12AD41CF100D06A61 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				719D66DE2AF5204300B2F95D /* Utility */,
 				7168E0EF2AD418E200D06A61 /* PokemonData.swift */,
 				7168E0F52AD420A800D06A61 /* API.swift */,
 				71D9C2242ADD6A3A000279B4 /* Database.swift */,
@@ -183,7 +186,6 @@
 				71D9C2682AE12A9F000279B4 /* DataManager.swift */,
 				71D9C26C2AE2D400000279B4 /* FlashCardGame.swift */,
 				71D9C26E2AE6728A000279B4 /* ThemeColor.swift */,
-				719D66DC2AF289BB00B2F95D /* getColorForPokemonType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +204,15 @@
 				719D66DA2AF285A400B2F95D /* InfoViewComponents.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		719D66DE2AF5204300B2F95D /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				719D66DC2AF289BB00B2F95D /* getColorForPokemonType.swift */,
+				719D66DF2AF5209300B2F95D /* getDeckInfo.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +368,7 @@
 				7168E0F62AD420A800D06A61 /* API.swift in Sources */,
 				71D9C26F2AE6728A000279B4 /* ThemeColor.swift in Sources */,
 				71D9C2692AE12A9F000279B4 /* DataManager.swift in Sources */,
+				719D66E02AF5209300B2F95D /* getDeckInfo.swift in Sources */,
 				71D9C26B2AE15490000279B4 /* PokemonFlashCardVeiw.swift in Sources */,
 				71D9C2772AF277FD000279B4 /* SelectDeckView.swift in Sources */,
 				719D66DB2AF285A400B2F95D /* InfoViewComponents.swift in Sources */,
