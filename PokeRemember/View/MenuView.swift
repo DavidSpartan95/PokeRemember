@@ -18,10 +18,6 @@ struct MenuView: View {
         VStack{
             Text("PokeRemember").font(.system(size: 36).bold()).foregroundColor(colorScheme == .dark ? textColor : .white)
             
-            ActionButton(title:"Add Scroe"){
-                dataManager.updateScore(deckName: "kanto_score", score: 10, userUID: dataManager.userUID!)
-            }
-            
             ActionButton(title:"Sign Out"){
                 logout()
                 logedIn = false
@@ -34,7 +30,10 @@ struct MenuView: View {
                 NavigationButton(title:"Pokedex")
             })
             
-            NavigationButton(title:"Plan Your Study")
+            NavigationLink(destination: ScheduleMakerView(), label: {
+                NavigationButton(title:"Plan Your Study")
+            })
+            
             Spacer() // Add Spacer to push content to the top
             
         }.frame(maxWidth: .infinity, maxHeight: .infinity,alignment: .center ) // Make the VStack fill the whole screen
