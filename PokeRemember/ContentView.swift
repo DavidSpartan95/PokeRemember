@@ -30,11 +30,11 @@ struct ContentView: View {
                         userIsLoggedIn.toggle()
                     }
                 }
-            }
+            }.accentColor(textColor)
         }else {
             NavigationStack{
                 MenuView(logedIn: $userIsLoggedIn)
-            }
+            }.accentColor(textColor)
         }
     }
 }

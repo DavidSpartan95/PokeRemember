@@ -17,13 +17,14 @@ struct ScheduleMakerView: View {
     var body: some View {
         VStack {
             Text("Select day to study (4 week reuccuring)")
+                .foregroundColor(textColor)
 
             Picker("Day of the Week", selection: $selectedDay) {
                 ForEach(weekdays, id: \.self) {
-                    Text($0)
+                    Text($0).foregroundColor(textColor)
                 }
             }
-            .pickerStyle(WheelPickerStyle()) // Use WheelPickerStyle
+            .pickerStyle(WheelPickerStyle()).foregroundColor(textColor)
             .padding()
 
             DatePicker("Time", selection: $selectedTime, displayedComponents: .hourAndMinute)
@@ -33,9 +34,10 @@ struct ScheduleMakerView: View {
 
             Button("Save Recurring Event") {
                 saveRecurringEvent()
-            }
+            }.foregroundColor(textColor)
             .padding()
-        }
+        }.frame(maxWidth: .infinity, maxHeight: .infinity,alignment: .center ) // Make the VStack fill the whole screen
+            .background(primaryColor)
     }
     //TODO move this to Model
     func saveRecurringEvent() {

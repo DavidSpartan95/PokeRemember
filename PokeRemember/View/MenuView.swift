@@ -16,33 +16,42 @@ struct MenuView: View {
     var body: some View{
 
         VStack{
+            
             Text("PokeRemember")
-                .font(.system(size: 36).bold())
+                .font(.system(size: 40).bold())
                 .foregroundColor(colorScheme == .dark ? textColor : .white)
+                .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
                 .accessibilityIdentifier("Title")
             
-            ActionButton(title: "Sign Out") {
-                logout()
-                logedIn = false
-            }
-            .accessibilityIdentifier("SignOutButton")
+            Spacer()
             
-            NavigationLink(destination: SelectDeckView(), label: {
-                NavigationButton(title: "Play")
-            })
-            .accessibilityIdentifier("PlayButton") // Add an identifier for the Play button
+            VStack{
+                
+                NavigationLink(destination: SelectDeckView(), label: {
+                    NavigationButton(title: "Play")
+                })
+                .accessibilityIdentifier("PlayButton")
+                
+                NavigationLink(destination: PokemonListPage(), label: {
+                    NavigationButton(title: "Pokedex")
+                })
+                .accessibilityIdentifier("PokedexButton")
+                
+                NavigationLink(destination: ScheduleMakerView(), label: {
+                    NavigationButton(title: "Make Routine")
+                })
+                .accessibilityIdentifier("PlanYourStudyButton")
+                
+                ActionButton(title: "Sign Out") {
+                    logout()
+                    logedIn = false
+                }
+                .accessibilityIdentifier("SignOutButton")
+                
+            }.padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
             
-            NavigationLink(destination: PokemonListPage(), label: {
-                NavigationButton(title: "Pokedex")
-            })
-            .accessibilityIdentifier("PokedexButton") // Add an identifier for the Pokedex button
+            Spacer()
             
-            NavigationLink(destination: ScheduleMakerView(), label: {
-                NavigationButton(title: "Plan Your Study")
-            })
-            .accessibilityIdentifier("PlanYourStudyButton") // Add an identifier for the Plan Your Study button
-            
-            Spacer() // Add Spacer to push content to the top
             
         }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center) // Make the VStack fill the whole screen
             .background(primaryColor)
