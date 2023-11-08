@@ -9,15 +9,16 @@ import Foundation
 import SwiftUI
 
 struct PokemonFlashCardView: View {
-    
     var deck: [PokemonEntry]
     @EnvironmentObject var dataManager: DataManager
     @StateObject var game: FlashCardGame
+    @Binding var isShowing: Bool
     
-    init(deck: [PokemonEntry]) {
-            self.deck = deck
-            self._game = StateObject(wrappedValue: FlashCardGame(deckToStudy: deck))
-        }
+    init(deck: [PokemonEntry], isShowing: Binding<Bool>) {
+        self.deck = deck
+        self._game = StateObject(wrappedValue: FlashCardGame(deckToStudy: deck))
+        self._isShowing = isShowing
+    }
     
     var body: some View {
         
@@ -32,15 +33,24 @@ struct PokemonFlashCardView: View {
                 let _ = newBestScore()
                 Image(systemName: "checkmark.circle")
                     .resizable()
-                    .frame(width: 100, height: 100)
+                    .frame(width: 200, height: 200)
                     .shadow(radius: 5)
+                    .foregroundColor(highlightColor)
+                HStack{
+                    ActionButton(title: "Try Again"){
+                        game.resetGame()
+                    }
+                    ActionButton(title: "Go Back"){
+                        isShowing = false
+                    }
+                }
             }else {
                 AsyncImage(url: URL(string:game.deck[game.randomNumber].urlPicture)){ phase in
                     if let image = phase.image{
                         
                         image.resizable()
                             .frame(width: 200, height: 200)
-                            .shadow(color: Color.black, radius: 5) // Add a shadow with a blue color and radius of 5
+                            .shadow(color: Color.black, radius: 5)
                         
                     } else if phase.error != nil {
                         // Handle error
@@ -75,8 +85,14 @@ struct PokemonFlashCardView: View {
     func newBestScore(){
         print("Activate")
         if let userUID = dataManager.userUID {
-            //getDeckHighScore(user: user, deckName: deck)
-            dataManager.updateScore(deckName: getDeckName(deckName: deck), score: game.score, userUID: userUID )
+            if let user = dataManager.user {
+                
+                let currentBestScore = getDeckHighScore(user: user, deckName: deck)
+                
+                if currentBestScore < game.score {
+                    dataManager.updateScore(deckName: getDeckName(deckName: deck), score: game.score, userUID: userUID )
+                }
+            }
         }
     }
 }

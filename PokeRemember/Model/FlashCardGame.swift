@@ -56,7 +56,6 @@ class FlashCardGame: ObservableObject{
         }
         cardsLeft = deck.count
         
-        
         if deck.count > 0 {
             randomNumber = Int.random(in: 0 ..< deck.count)
         } else {
@@ -66,7 +65,7 @@ class FlashCardGame: ObservableObject{
         var tempChoices: [String] = []
         //append the correct awnser
         tempChoices.append(deck[randomNumber].name)
-        //append 3 radnom names from of all pokemon (all must be unique)
+        //append 3 radnom pokemon names (all must be unique)
         while tempChoices.count < 4 {
             
             let randomName = deckToStudy.randomElement()?.name
@@ -74,8 +73,25 @@ class FlashCardGame: ObservableObject{
                 tempChoices.append(randomName ?? "???")
             }
         }
-        
         choices = tempChoices
+        choices.shuffle()
+    }
+    
+    func resetGame() {
+        randomNumber = Int.random(in: 0 ..< deckToStudy.count)
+        deck = deckToStudy
+        cardsLeft = deckToStudy.count
+        score = 0
+        gameOver = false
+        resetChoices()
+    }
+    private func resetChoices() {
+        choices = [
+            deckToStudy[randomNumber].name,
+            deckToStudy[Int.random(in: 0 ..< deckToStudy.count)].name,
+            deckToStudy[Int.random(in: 0 ..< deckToStudy.count)].name,
+            deckToStudy[Int.random(in: 0 ..< deckToStudy.count)].name
+        ]
         choices.shuffle()
     }
 }
