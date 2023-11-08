@@ -75,6 +75,7 @@ struct PokemonFlashCardView: View {
     func newBestScore(){
         print("Activate")
         if let userUID = dataManager.userUID {
+            //getDeckHighScore(user: user, deckName: deck)
             dataManager.updateScore(deckName: getDeckName(deckName: deck), score: game.score, userUID: userUID )
         }
     }

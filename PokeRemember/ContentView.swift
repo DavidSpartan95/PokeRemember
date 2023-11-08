@@ -24,7 +24,9 @@ struct ContentView: View {
             }.onAppear{
                 Auth.auth().addStateDidChangeListener{ auth, user in
                     if let user = user {
+                        //TODO when we get a user.uid then we should fetch
                         dataManager.userUID = user.uid
+                        dataManager.fetchUser()
                         userIsLoggedIn.toggle()
                     }
                 }
@@ -37,9 +39,9 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+/*struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
-}
+}*/
 

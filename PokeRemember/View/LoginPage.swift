@@ -16,18 +16,32 @@ struct LogInPage: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                Text("LogIn")
+                Text("LOGIN")
                     .font(.system(size: 36).bold())
                     .foregroundColor(.white)
                     .frame(width: geometry.size.width*0.33, height: geometry.size.height*0.1)
             
                 TextField("Email", text: $email)
-                    .frame(width: geometry.size.width*0.33, height: geometry.size.height*0.05).background(.white)
+                    .foregroundColor(textColor)
+                    .textFieldStyle(.plain)
+                    .frame(width: geometry.size.width*0.80)
+                Rectangle()
+                    .frame(width: geometry.size.width*0.80, height:1)
+                    .foregroundColor(textColor)
+                
+                Spacer().frame(height: 20)
                 
                 SecureField("Password", text: $password)
-                    .frame(width: geometry.size.width*0.33, height: geometry.size.height*0.05).background(.white)
-                Button("LOG IN", action: {
-    
+                    .foregroundColor(textColor)
+                    .textFieldStyle(.plain)
+                    .frame(width: geometry.size.width*0.80)
+                Rectangle()
+                    .frame(width: geometry.size.width*0.80, height:1)
+                    .foregroundColor(textColor)
+                
+                Spacer().frame(height: 20)
+                
+                ActionButton(title: "LOGIN"){
                     login(email: email, password: password) { success in
                         if success {
                             logedIn = true
@@ -35,16 +49,16 @@ struct LogInPage: View {
                             print("Failed to log in")
                         }
                     }
-
-                })
+                }
+                
                 NavigationLink(destination: RegisterPage(), label: {
-                    Text("Register account").bold().padding().foregroundColor(.black)
+                    Text("Register account").bold().padding().foregroundColor(.white)
                 })
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .edgesIgnoringSafeArea(.all)
             .alignmentGuide(HorizontalAlignment.center) { $0[.leading] }
-            .background(Color.red)
+            .background(primaryColor)
         }
     }
 }

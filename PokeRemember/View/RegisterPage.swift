@@ -17,19 +17,32 @@ struct RegisterPage: View {
         GeometryReader { geometry in
             VStack {
                
-                Text("Register")
+                Text("Sign Up")
                     .font(.system(size: 36).bold())
                     .foregroundColor(.white)
-                    .frame(width: geometry.size.width*0.33, height: geometry.size.height*0.1)
+                    //.frame(width: geometry.size.width*0.33, height: geometry.size.height*0.1)
             
                 TextField("Email", text: $email)
-                    .frame(width: geometry.size.width*0.33, height: geometry.size.height*0.05).background(.white)
+                    .foregroundColor(textColor)
+                    .textFieldStyle(.plain)
+                    .frame(width: geometry.size.width*0.80)
+                Rectangle()
+                    .frame(width: geometry.size.width*0.80, height:1)
+                    .foregroundColor(textColor)
+                
+                Spacer().frame(height: 20)
                 
                 SecureField("Password", text: $password)
-                    .frame(width: geometry.size.width*0.33, height: geometry.size.height*0.05).background(.white)
+                    .foregroundColor(textColor)
+                    .textFieldStyle(.plain)
+                    .frame(width: geometry.size.width*0.80)
+                Rectangle()
+                    .frame(width: geometry.size.width*0.80, height:1)
+                    .foregroundColor(textColor)
                 
-                Button("SIGN UP", action: {
-                    //TODO USE the "addUserFunction"
+                Spacer().frame(height: 20)
+                
+                ActionButton(title: "COMPLETE"){
                     register(email: email, password: password){success in
                         
                         if success {
@@ -38,13 +51,13 @@ struct RegisterPage: View {
                             print("Failed to sign in")
                         }
                     }
-                })
+                }
                 
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .edgesIgnoringSafeArea(.all)
             .alignmentGuide(HorizontalAlignment.center) { $0[.leading] }
-            .background(Color.red)
+            .background(primaryColor)
         }
     }
 }
