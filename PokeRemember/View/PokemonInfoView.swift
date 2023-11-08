@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct PokemonInfoPage: View {
+struct PokemonInfoView: View {
     
     let POKEMON: PokemonEntry
     @State var pokemonInfo: Pokemon? = nil
@@ -50,9 +50,13 @@ struct PokemonInfoPage: View {
                         }
                     }
                     
-                    Text(" Height \(String(pokemonInfo.height/10))m")
-                    Text(" weight \(String(pokemonInfo.weight/10))kg")
-                    Text(" Base EXP \(String(pokemonInfo.base_experience))")
+                    DataWindow(text:"Base EXP \(String(pokemonInfo.base_experience))")
+                    
+                    HStack {
+                        DataWindow(text: " Height \(String(pokemonInfo.height/10))m")
+                        DataWindow(text: "Weight \(String(pokemonInfo.weight/10))kg")
+                    }
+                    
                     Spacer()
                 }
                 

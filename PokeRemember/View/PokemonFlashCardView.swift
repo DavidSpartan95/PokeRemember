@@ -23,12 +23,17 @@ struct PokemonFlashCardView: View {
     var body: some View {
         
         VStack{
-            if let user = dataManager.user {
-                Text(String(getDeckHighScore(user: user, deckName: deck))).bold().foregroundColor(.white)
+            
+            DataWindow(text: "CARDS LEFT: \(game.cardsLeft)")
+            HStack{
+                if let user = dataManager.user {
+                    DataWindow(text: "PB: \(String(getDeckHighScore(user: user, deckName: deck)))")
+                }
+                DataWindow(text: "SCORE: \(game.score)")
             }
             
-            Text("CARDS LEFT: \(game.cardsLeft)").bold().foregroundColor(.white)
-            Text("SCORE: \(game.score)").bold().foregroundColor(.white)
+            Spacer()
+            
             if game.gameOver {
                 let _ = newBestScore()
                 Image(systemName: "checkmark.circle")
@@ -36,6 +41,9 @@ struct PokemonFlashCardView: View {
                     .frame(width: 200, height: 200)
                     .shadow(radius: 5)
                     .foregroundColor(highlightColor)
+                
+                Spacer()
+                
                 HStack{
                     ActionButton(title: "Try Again"){
                         game.resetGame()
@@ -43,7 +51,7 @@ struct PokemonFlashCardView: View {
                     ActionButton(title: "Go Back"){
                         isShowing = false
                     }
-                }
+                }.padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
             }else {
                 AsyncImage(url: URL(string:game.deck[game.randomNumber].urlPicture)){ phase in
                     if let image = phase.image{
@@ -60,6 +68,9 @@ struct PokemonFlashCardView: View {
                         ProgressView()
                     }
                 }
+                
+                Spacer()
+                
                 HStack{
                     ActionButton(title: game.choices[0]){
                         game.checkAwnser(awsner: game.choices[0])
@@ -68,7 +79,7 @@ struct PokemonFlashCardView: View {
                     ActionButton(title: game.choices[1]){
                         game.checkAwnser(awsner: game.choices[1])
                     }
-                }
+                }.padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 HStack{
                     ActionButton(title: game.choices[2]){
                         game.checkAwnser(awsner: game.choices[2])
@@ -76,7 +87,7 @@ struct PokemonFlashCardView: View {
                     ActionButton(title: game.choices[3]){
                         game.checkAwnser(awsner: game.choices[3])
                     }
-                }
+                }.padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
             }
 
         }.frame(maxWidth: .infinity, maxHeight: .infinity) // Make the VStack fill the whole screen

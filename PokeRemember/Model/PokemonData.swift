@@ -916,7 +916,7 @@ let pokeArray = [
     PokemonEntry(name: "Calyrex", urlPicture: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/898.png", dexNo: 898)
 ]
 
-let kantoDeck = Array(pokeArray[0..<151])
+let kantoDeck = Array(pokeArray[0..<150])
 let jhotoDeck = Array(pokeArray[151..<250])
 let hoennDeck = Array(pokeArray[251..<386])
 let sinnohDeck = Array(pokeArray[387..<493])
@@ -925,7 +925,3 @@ let kalosDeck = Array(pokeArray[649..<720])
 let alolaDeck = Array(pokeArray[721..<808])
 let galarDeck = Array(pokeArray[809..<897])
 
-/*
- PokemonEntry(name: "Golduck", urlPicture: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/55.png", dexNo:55),
- PokemonEntry(name: "Pikachu", urlPicture: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/25.png", dexNo:25)
- */

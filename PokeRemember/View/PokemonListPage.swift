@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PokemonListPage: View {
+struct PokemonListView: View {
     
     @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var dataManager: DataManager
@@ -27,7 +27,7 @@ struct PokemonList: View {
         ZStack {
             List() {
                 ForEach(pokeArray) { pokemon in
-                    NavigationLink( destination: PokemonInfoPage(POKEMON: pokemon)){
+                    NavigationLink( destination: PokemonInfoView(POKEMON: pokemon)){
                         HStack{
                             AsyncImage(url: URL(string:pokemon.urlPicture)){ phase in
                                 if let image = phase.image{

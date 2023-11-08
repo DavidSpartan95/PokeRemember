@@ -21,10 +21,31 @@ struct TypeEmblem: View {
             .foregroundColor(.white)
             .padding()
             .background(getColorForPokemonType(typeName: type))
+            .cornerRadius(30)
+            .overlay(
+                RoundedRectangle(cornerRadius: 30)
+                    .stroke(.black, lineWidth: 2)
+            )
+    }
+}
+struct DataWindow: View {
+    
+    let text:String
+    
+    var body: some View {
+        let screen = UIScreen.main.bounds
+        let WindowWidth = screen.width * 0.3
+        
+        Text(text)
+            .bold()
+            .frame(minWidth:WindowWidth)
+            .foregroundColor(.white)
+            .padding()
+            .background(Color.white.opacity(0.5))
             .cornerRadius(16)
             .overlay(
                 RoundedRectangle(cornerRadius: 16)
-                    .stroke(.black, lineWidth: 2)
+                    .stroke(Color.white, lineWidth: 4)
             )
     }
 }

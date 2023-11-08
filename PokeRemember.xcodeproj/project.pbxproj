@@ -21,7 +21,7 @@
 		719471DB2AFA3CD000E1EDC3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 719471DA2AFA3CD000E1EDC3 /* FirebaseFirestore */; };
 		719471DF2AFA426C00E1EDC3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 719471DE2AFA426C00E1EDC3 /* FirebaseFirestore */; };
 		719471E12AFA428100E1EDC3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 719471E02AFA428100E1EDC3 /* FirebaseAuth */; };
-		719D66DB2AF285A400B2F95D /* InfoViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719D66DA2AF285A400B2F95D /* InfoViewComponents.swift */; };
+		719D66DB2AF285A400B2F95D /* InfoComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719D66DA2AF285A400B2F95D /* InfoComponents.swift */; };
 		719D66DD2AF289BB00B2F95D /* getColorForPokemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719D66DC2AF289BB00B2F95D /* getColorForPokemonType.swift */; };
 		719D66E02AF5209300B2F95D /* getDeckInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719D66DF2AF5209300B2F95D /* getDeckInfo.swift */; };
 		719D66E22AF8F47900B2F95D /* ScheduleMakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719D66E12AF8F47900B2F95D /* ScheduleMakerView.swift */; };
@@ -74,7 +74,7 @@
 		7168E0EF2AD418E200D06A61 /* PokemonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonData.swift; sourceTree = "<group>"; };
 		7168E0F32AD41DBA00D06A61 /* PokemonInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonInfoView.swift; sourceTree = "<group>"; };
 		7168E0F52AD420A800D06A61 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		719D66DA2AF285A400B2F95D /* InfoViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewComponents.swift; sourceTree = "<group>"; };
+		719D66DA2AF285A400B2F95D /* InfoComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoComponents.swift; sourceTree = "<group>"; };
 		719D66DC2AF289BB00B2F95D /* getColorForPokemonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getColorForPokemonType.swift; sourceTree = "<group>"; };
 		719D66DF2AF5209300B2F95D /* getDeckInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getDeckInfo.swift; sourceTree = "<group>"; };
 		719D66E12AF8F47900B2F95D /* ScheduleMakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleMakerView.swift; sourceTree = "<group>"; };
@@ -204,15 +204,14 @@
 		7168E0F22AD41D1A00D06A61 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				719471E62AFC2BA600E1EDC3 /* Components */,
 				7168E0F32AD41DBA00D06A61 /* PokemonInfoView.swift */,
 				71D9C2132ADD331D000279B4 /* PokemonListPage.swift */,
 				71D9C2152ADD365D000279B4 /* LoginPage.swift */,
 				71D9C2172ADD3FDF000279B4 /* RegisterPage.swift */,
 				71D9C26A2AE15490000279B4 /* PokemonFlashCardView.swift */,
 				71D9C2742AEBEF4E000279B4 /* MenuView.swift */,
-				71D9C2702AE69388000279B4 /* Buttons.swift */,
 				71D9C2762AF277FD000279B4 /* SelectDeckView.swift */,
-				719D66DA2AF285A400B2F95D /* InfoViewComponents.swift */,
 				719D66E12AF8F47900B2F95D /* ScheduleMakerView.swift */,
 			);
 			path = View;
@@ -223,6 +222,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		719471E62AFC2BA600E1EDC3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				71D9C2702AE69388000279B4 /* Buttons.swift */,
+				719D66DA2AF285A400B2F95D /* InfoComponents.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		719D66DE2AF5204300B2F95D /* Utility */ = {
@@ -399,7 +407,7 @@
 				719D66E02AF5209300B2F95D /* getDeckInfo.swift in Sources */,
 				71D9C26B2AE15490000279B4 /* PokemonFlashCardView.swift in Sources */,
 				71D9C2772AF277FD000279B4 /* SelectDeckView.swift in Sources */,
-				719D66DB2AF285A400B2F95D /* InfoViewComponents.swift in Sources */,
+				719D66DB2AF285A400B2F95D /* InfoComponents.swift in Sources */,
 				71D9C2672AE128CA000279B4 /* UserData.swift in Sources */,
 				71D9C2182ADD3FDF000279B4 /* RegisterPage.swift in Sources */,
 			);

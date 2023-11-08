@@ -32,7 +32,7 @@ struct MenuView: View {
                 })
                 .accessibilityIdentifier("PlayButton")
                 
-                NavigationLink(destination: PokemonListPage(), label: {
+                NavigationLink(destination: PokemonListView(), label: {
                     NavigationButton(title: "Pokedex")
                 })
                 .accessibilityIdentifier("PokedexButton")
