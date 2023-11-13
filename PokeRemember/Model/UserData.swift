@@ -9,8 +9,6 @@ import Foundation
 
 struct UserData {
     
-    let name: String
-    let age: Int
     let kanto_score: Int
     let johto_score: Int
     let hoenn_score: Int

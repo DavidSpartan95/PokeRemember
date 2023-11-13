@@ -31,6 +31,7 @@ struct TypeEmblem: View {
 struct DataWindow: View {
     
     let text:String
+    let color: Color?
     
     var body: some View {
         let screen = UIScreen.main.bounds
@@ -41,11 +42,25 @@ struct DataWindow: View {
             .frame(minWidth:WindowWidth)
             .foregroundColor(.white)
             .padding()
-            .background(Color.white.opacity(0.5))
+            .background(color ?? Color.white.opacity(0.5))
             .cornerRadius(16)
             .overlay(
                 RoundedRectangle(cornerRadius: 16)
                     .stroke(Color.white, lineWidth: 4)
             )
+    }
+}
+struct StatDisplayView: View {
+    
+    let stats: [Stat]
+    let statColors = [Color.red.opacity(0.9), Color.orange.opacity(0.9), Color.yellow.opacity(0.9), Color.blue.opacity(0.9), Color.green.opacity(0.9), Color.pink.opacity(0.9)]
+    var body: some View {
+        let screen = UIScreen.main.bounds
+        let WindowWidth = screen.width * 0.3
+        
+        ForEach(Array(stats.enumerated()), id: \.offset ){ index,stat in
+            let text = "\(stat.name): \(stat.base_stat)"
+            DataWindow(text:text, color: statColors[index])
+        }
     }
 }

@@ -24,12 +24,12 @@ struct PokemonFlashCardView: View {
         
         VStack{
             
-            DataWindow(text: "CARDS LEFT: \(game.cardsLeft)")
+            DataWindow(text: "CARDS LEFT: \(game.cardsLeft)", color:nil)
             HStack{
                 if let user = dataManager.user {
-                    DataWindow(text: "PB: \(String(getDeckHighScore(user: user, deckName: deck)))")
+                    DataWindow(text: "PB: \(String(getDeckHighScore(user: user, deckName: deck)))", color: nil)
                 }
-                DataWindow(text: "SCORE: \(game.score)")
+                DataWindow(text: "SCORE: \(game.score)",color:nil)
             }
             
             Spacer()
@@ -94,7 +94,6 @@ struct PokemonFlashCardView: View {
             .background(primaryColor) // Set the background color of the VStack to red
     }
     func newBestScore(){
-        print("Activate")
         if let userUID = dataManager.userUID {
             if let user = dataManager.user {
                 

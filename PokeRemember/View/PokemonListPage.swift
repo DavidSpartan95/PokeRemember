@@ -15,7 +15,6 @@ struct PokemonListView: View {
     var body: some View {
         
         VStack {
-            Text(dataManager.user?.name ?? "No name")
             PokemonList()
         }
         .padding().background(primaryColor)

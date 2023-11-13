@@ -32,8 +32,6 @@ class DataManager: ObservableObject {
                     if let userSpesificData = snapshot.documents.first(where: {$0.documentID == self.userUID}){
                         let data = userSpesificData
                         
-                        let name = data["name"] as? String ?? ""
-                        let age = data["age"] as? Int ?? 0
                         let kanto_score = data["kanto_score"] as? Int ?? 0
                         let johto_score = data["johto_score"] as? Int ?? 0
                         let hoenn_score = data["hoenn_score"] as? Int ?? 0
@@ -44,8 +42,6 @@ class DataManager: ObservableObject {
                         let galar_score = data["galar_score"] as? Int ?? 0
                         
                         let updatedUser = UserData(
-                            name: name,
-                            age: age,
                             kanto_score: kanto_score,
                             johto_score: johto_score,
                             hoenn_score: hoenn_score,
@@ -64,24 +60,6 @@ class DataManager: ObservableObject {
         deinit {
             listener?.remove()
         }
-
-    
-    func updateAge(age: Int, userUID: String) {
-        let db = Firestore.firestore()
-        let ref = db.collection("UserData").document(userUID)
-        
-        // Create a dictionary with the field you want to update
-        let dataToUpdate = ["age": age]
-        
-        // Use the updateData method to update only the specified fields
-        ref.updateData(dataToUpdate) { error in
-            if let error = error {
-                print("Error updating age: \(error.localizedDescription)")
-            } else {
-                print("Age updated successfully")
-            }
-        }
-    }
     
     func updateScore(deckName:String, score: Int, userUID: String) {
            

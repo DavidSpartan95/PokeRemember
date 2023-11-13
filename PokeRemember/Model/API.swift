@@ -13,7 +13,8 @@ struct Types: Identifiable {
     let slot: Int
     let name: String
 }
-struct Stat {
+struct Stat:Identifiable {
+    let id = UUID()
     let base_stat: Int
     let effort: Int
     let name: String

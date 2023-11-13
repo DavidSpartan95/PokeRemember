@@ -32,7 +32,7 @@ func getDeckName(deckName: [PokemonEntry]) -> String {
 
 
 func getDeckHighScore(user:UserData,deckName: [PokemonEntry]) -> Int {
-    print(user.kanto_score)
+
     switch deckName {
     case kantoDeck:
         return user.kanto_score

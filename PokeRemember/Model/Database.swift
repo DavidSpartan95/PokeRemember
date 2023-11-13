@@ -49,8 +49,6 @@ func addUserData(name: String, age: Int, userUID: String) {
     let ref = db.collection("UserData").document(userUID)
     
     let userData = UserData(
-        name: name,
-        age: age,
         kanto_score: 0,
         johto_score: 0,
         hoenn_score: 0,
@@ -62,8 +60,6 @@ func addUserData(name: String, age: Int, userUID: String) {
     )
     
     let data: [String: Any] = [
-        "name": userData.name,
-        "age": userData.age,
         "kanto_score": userData.kanto_score,
         "johto_score": userData.johto_score,
         "hoenn_score": userData.hoenn_score,
@@ -76,7 +72,6 @@ func addUserData(name: String, age: Int, userUID: String) {
     
     ref.setData(data) { error in
         if let error = error {
-            print("NOOOOOOOOOOOOOOOO")
             print(error.localizedDescription)
         }
     }
