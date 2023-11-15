@@ -12,12 +12,11 @@ struct PokemonFlashCardView: View {
     var deck: [PokemonEntry]
     @EnvironmentObject var dataManager: DataManager
     @StateObject var game: FlashCardGame
-    @Binding var isShowing: Bool
     
-    init(deck: [PokemonEntry], isShowing: Binding<Bool>) {
+    
+    init(deck: [PokemonEntry]) {
         self.deck = deck
         self._game = StateObject(wrappedValue: FlashCardGame(deckToStudy: deck))
-        self._isShowing = isShowing
     }
     
     var body: some View {
