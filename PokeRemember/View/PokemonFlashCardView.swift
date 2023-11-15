@@ -48,9 +48,6 @@ struct PokemonFlashCardView: View {
                     ActionButton(title: "Try Again"){
                         game.resetGame()
                     }
-                    ActionButton(title: "Go Back"){
-                        isShowing = false
-                    }
                 }.padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
             }else {
                 AsyncImage(url: URL(string:game.deck[game.randomNumber].urlPicture)){ phase in
